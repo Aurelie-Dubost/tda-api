@@ -21,6 +21,7 @@ def main(api_key, redirect_uri, token_path):
     if driver is None:
         try:
             driver = webdriver.Firefox()
+
         except WebDriverException as e:
             print('Failed to open Firefox, continuing:', e)
 
@@ -82,3 +83,4 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     sys.exit(main(args.api_key, args.redirect_uri, args.token_file))
+
